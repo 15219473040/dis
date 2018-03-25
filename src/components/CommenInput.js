@@ -22,7 +22,8 @@ export default class CommentInput extends Component {
          
     }
     clickHandle = () => {
-         this.props.appclick(this.state) 
+         this.props.onSubmit(this.state) ;
+         this.setState({name:"",cont:""})
     }
     render() {
         return <div className="inputBox">

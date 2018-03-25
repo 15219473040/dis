@@ -31,10 +31,17 @@ export default class CommentApp extends Component {
         this.setState({comments });
         this._saveComments(comments);
     }
+    handleDel(ind){
+        const arr = this.state.comments;
+        arr.splice(ind,1);
+        this.setState({ arr });
+        this._saveComments(arr);
+        
+    }
     render() {
         return <div className="commenBox">
-            <CommenInput appclick={this.handleSubmitComment} />
-            <CommenList list={this.state.comments} />
+            <CommenInput onSubmit={this.handleSubmitComment} />
+            <CommenList list={this.state.comments} onDel={this.handleDel.bind(this)}/>
         </div>
     }
 }

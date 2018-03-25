@@ -8,7 +8,7 @@ export default class CommenList extends Component {
         var arr=this.props.list||[]
         return <div className="listBox">
             
-            {arr.map((item,ind)=><Commen arr={item} key={ind}/>)}
+            {arr.map((item, ind) => <Commen arr={item} key={ind} k={ind} onDel={this.props.onDel}/>)}
         </div>
     }
 }
