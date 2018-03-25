@@ -8,6 +8,9 @@ export default class CommentInput extends Component {
         }
 
     }
+    componentDidMount(){
+        this.textarea.focus()
+    }
     change = (e) => {
         var tar = e.target;
         var _this=this;
@@ -24,7 +27,7 @@ export default class CommentInput extends Component {
     render() {
         return <div className="inputBox">
                     <p>用户名:<input type='text' data-k="name"  value={this.state.name} onChange={this.change}/></p>
-            <p>评论内容:<textarea data-k="cont" value={this.state.cont} onChange={this.change} ></textarea></p>
+            <p>评论内容:<textarea data-k="cont" ref={e=>this.textarea=e} value={this.state.cont} onChange={this.change} ></textarea></p>
             <input type='button' className='subBtn' value="发布" onClick={this.clickHandle}/>
                 </div>
     }

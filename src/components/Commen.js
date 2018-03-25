@@ -5,8 +5,23 @@ export default class Commen extends Component {
         super(props);
 
     }
+    componentWillMount() {
+        console.log("willmount")
+    }
+    componentDidMount(){
+        console.log("didmount")
+    }
+    componentWillUpdate() {
+        console.log("componentWillUpdate")
+    }
+    componentDidUpdate() {
+        console.log("componentDidUpdate")
+    }
+    componentWillUnmount(){
+        console.log("willUnmount")
+    }
     render() {
-       
+        console.log("render")
        
         return <div className="list cl">
                   <div className='list-l'>{this.props.arr.name}</div>
