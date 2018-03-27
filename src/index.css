@@ -26,3 +26,7 @@ body {
 .cl::after{clear: both;display: block;content:"";}
 .list-l{width:100px;float:left;color: #22f}
 .list-r{width:calc(100% - 120px);float:left;}
+
+.nav_item{
+  margin: 5px;
+}
