@@ -12,6 +12,7 @@
 
     history.replaceState(null, doc.title, location.pathname + "#/r");
     history.pushState(null, doc.title, location.pathname);
+    // oppo 在此需要用为其做兼容，可以用jq
     win.addEventListener("popstate", function () {
         if (loc.hash == "#/r") {
 
