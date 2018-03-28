@@ -44,6 +44,19 @@ class Content extends Component {
         return (
             <div>
                 <h2 style={{color:this.context.themeColor}}>React.js 小书内容</h2>
+                <Details/>
+            </div>
+        )
+    }
+}
+class Details extends Component {
+    static contextTypes = {
+        themeColor: PropTypes.string
+    }
+    render() {
+        return (
+            <div style={{color:this.context.themeColor}}>
+                details
             </div>
         )
     }
