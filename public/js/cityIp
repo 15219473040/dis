@@ -1,0 +1,51 @@
+<script language="javascript" type="text/javascript" src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
+	<script type="text/javascript" src="http://pv.sohu.com/cityjson/getip.aspx" charset="utf-8"></script>
+	<script language="javascript" type="text/javascript">
+		function getQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]); return null;
+		}
+		var bm = getQueryString("bm");
+		var cid = getQueryString("cid");
+		// var city = remote_ip_info['city'];
+		// var province = remote_ip_info['province'];
+		var citys="";
+
+		try {
+			if (remote_ip_info) {
+				console.log("sina 正常")
+				citys=remote_ip_info['city'];
+			}
+		}
+		catch (err) {
+		 
+			console.log("err", err, returnCitySN);
+
+			citys= returnCitySN.cname
+
+			
+		}
+
+
+		var no_contain=function(loc_city,arr_citys){
+			return arr_citys.every(function(v,i){
+				return loc_city.indexOf(v)==-1
+			})
+		}
+		var is_contain = function (loc_city, arr_citys) {
+				return arr_citys.some(function (v, i) {
+					return loc_city.indexOf(v) !== -1
+				})
+			}
+		
+		
+		var Shield_citys=["北京","上海","深圳"]
+
+		if (no_contain(citys,Shield_citys) && navigator.userAgent.match(/(iPhone|iPod|Android|ios|ipad)/i)) {
+
+			window.location.href = "tf/?cid=" + cid + "&bm=" + bm;
+		}
+
+
+	</script>
