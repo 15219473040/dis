@@ -1,0 +1,4 @@
+获取IP，城市常见的接口
+1，http://ip.taobao.com/service/getIpInfo.php?ip=202.198.16.3
+2，http://whois.pconline.com.cn/ipJson.jsp?callback=testJson&ip=119.123.2.10
+3,http://whois.pconline.com.cn/?ip=119.123.205.122
