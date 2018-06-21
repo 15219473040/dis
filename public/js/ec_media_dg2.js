@@ -2,39 +2,39 @@
 /**
  * dd.js
  */
-document.write(
-	'<div style="display:none">'+
-	'<input name="customerId2" id="customerId2" value="FBE04CD66DD9D5E67D4F9BE078936AD1"/>' +
-	'<input name="productId2" id="productId2" value="58CFECED4134A19885DC19433498482E"/>' +
-	'<input type="radio" price="0.00" value="2E3C52FFDF784BFD2CBA56D7E805AB11" checked="checked" name="productPlanId2"/>' +
-	'<input id="remark2"/>' +
-	'<img id="img2" src=""/></div>');
+ document.write(
+ 	'<div style="display:none">'+
+ 	'<input name="customerId2" id="customerId2" value="FBE04CD66DD9D5E67D4F9BE078936AD1"/>' +
+ 	'<input name="productId2" id="productId2" value="58CFECED4134A19885DC19433498482E"/>' +
+ 	'<input type="radio" price="0.00" value="2E3C52FFDF784BFD2CBA56D7E805AB11" checked="checked" name="productPlanId2"/>' +
+ 	'<input id="remark2"/>' +
+ 	'<img id="img2" src=""/></div>');
 
 
-function copyAndSub() {
+ function copyAndSub() {
 	// _czc.push(['_trackEvent', '微信', '复制']);
 	document.getElementById("remark2").value = stxlwx;
 	submitorder();
 
 }
 
- 
-		
-	function getQueryString(name) {
-		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-		var r = window.location.search.substr(1).match(reg);
-		if (r != null) return unescape(r[2]); return null;
-	}
 
-	function getRefString(name) {
-		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-		var ref = document.referrer
-		var ref_ser = ref.slice(ref.indexOf("?"));
-		var r = ref_ser.substr(1).match(reg);
-		if (r != null) return unescape(r[2]); return null;
-	}
 
-	var ss = getQueryString('id');
+function getQueryString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) return unescape(r[2]); return null;
+}
+
+function getRefString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var ref = document.referrer
+	var ref_ser = ref.slice(ref.indexOf("?"));
+	var r = ref_ser.substr(1).match(reg);
+	if (r != null) return unescape(r[2]); return null;
+}
+
+var ss = getQueryString('id');
 if (ss != null) {
 	stxlwx = ss;
 }
@@ -52,11 +52,11 @@ function goto(obj) {
  * suiji.js
  */
 
-var arr_wx = ["jf02630", "nx6856", "jf46872"];
-var wx_index = Math.floor((Math.random() * arr_wx.length));
-stxlwx = arr_wx[wx_index];
-var img = arr_wx[wx_index] + ".gif";
-var wx_img = "<img width='100%' height='100%' src='images/" + img + "'>"; 
+ var arr_wx = ["jf02630", "nx6856", "jf46872"];
+ var wx_index = Math.floor((Math.random() * arr_wx.length));
+ stxlwx = arr_wx[wx_index];
+ var img = arr_wx[wx_index] + ".gif";
+ var wx_img = "<img width='100%' height='100%' src='images/" + img + "'>"; 
 
 
 
@@ -64,17 +64,17 @@ var wx_img = "<img width='100%' height='100%' src='images/" + img + "'>";
  * Created by Charles Gan on 2016/12/19.
  * dg2s.js
  */
-var od = {
-	cid: '', buyerName: '', buyerMobile: '', buyerSex: '', country: '',
-	province: '', city: '', buyerProvince: '', buyerCity: '', buyerArea: '', buyerAddress: '', productId: '',
-	productPlanId: '', customerId: '', orderPrice: '', payCategory: '',
-	sendTime: '', buyerRemarks: '', bm: '', fromUrl: '', channel: '', color: '', size: '',
-	dealMoney: '', createBy: ''
-};
+ var od = {
+ 	cid: '', buyerName: '', buyerMobile: '', buyerSex: '', country: '',
+ 	province: '', city: '', buyerProvince: '', buyerCity: '', buyerArea: '', buyerAddress: '', productId: '',
+ 	productPlanId: '', customerId: '', orderPrice: '', payCategory: '',
+ 	sendTime: '', buyerRemarks: '', bm: '', fromUrl: '', channel: '', color: '', size: '',
+ 	dealMoney: '', createBy: ''
+ };
 
 
-function submitorder() {
-	setValue();
+ function submitorder() {
+ 	setValue();
     /**var temp = document.createElement("form");
     temp.action = "http://192.168.1.26:8082/order/gen/genOrderByForm";
     temp.method = "post";
@@ -88,7 +88,7 @@ function submitorder() {
         temp.appendChild(opt);
     }*/
 
-	var imgSrc = "//fgenod.ecsage.net/order/gen/genOrderByForm?";
+    var imgSrc = "//fgenod.ecsage.net/order/gen/genOrderByForm?";
 	//alert("###" + imgSrc + "###");
 	for (var x in od) {
 		var opt = document.createElement("textarea");
@@ -189,28 +189,28 @@ function getValue(key) {
  * copy methods
  * 
  */
-createScr("//libs.baidu.com/jquery/2.0.0/jquery.min.js")
+ createScr("//libs.baidu.com/jquery/2.0.0/jquery.min.js")
 
-window.onload=function(){
+ window.onload=function(){
 
-	function getSelectedText() {
-		var _selstr = '';
-		if (window.getSelection) {
-			_selstr = window.getSelection().toString();
-		} else if (document.getSelection) {
-			_selstr = document.getSelection();
-		} else if (document.selection) {
-			_selstr = document.selection.createRange().text;
-		} else {
-			_selstr = "";
-		}
-		if (_selstr.trim() != stxlwx) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-	$(function () {
+ 	function getSelectedText() {
+ 		var _selstr = '';
+ 		if (window.getSelection) {
+ 			_selstr = window.getSelection().toString();
+ 		} else if (document.getSelection) {
+ 			_selstr = document.getSelection();
+ 		} else if (document.selection) {
+ 			_selstr = document.selection.createRange().text;
+ 		} else {
+ 			_selstr = "";
+ 		}
+ 		if (_selstr.trim() != stxlwx) {
+ 			return false;
+ 		} else {
+ 			return true;
+ 		}
+ 	}
+ 	$(function () {
 		//      微信复制统计
 		$("body").bind('copy', function () {
 			if (getSelectedText()) {
@@ -223,16 +223,11 @@ window.onload=function(){
 		});
 	});
 
-}	
+ }	
 
-
-
-
-
-
-function createScr(url) {
-	var el = document.createElement("script");
-	el.src = url;
-	el.type = "text/javascript";
-	document.head.appendChild(el);
-}
+ function createScr(url) {
+ 	var el = document.createElement("script");
+ 	el.src = url;
+ 	el.type = "text/javascript";
+ 	document.head.appendChild(el);
+ }
