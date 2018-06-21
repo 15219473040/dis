@@ -12,23 +12,25 @@ createScr('//odjs.ecsage.net/js/area.js');
 
 window.onload =function(){
 
-_init_area()
+	_init_area()
+	var CID2="891B45E1A8B1535183EF87588112AA6F";
+	var PID2="02BDA81C9E99E2AF1172BA1B0A6008E1";
+	var PRICE2="2D09079FC0EFC44FBE41BC1C28259C06";
 
-	$el("customerId2").value="891B45E1A8B1535183EF87588112AA6F"
-	$el("productId2").value="02BDA81C9E99E2AF1172BA1B0A6008E1"
+	$el("customerId2").value=CID2;
+	$el("productId2").value=PID2;
 	var _obj = document.getElementsByName("productPlanId2");
 	if(_obj){
-			for(var i=0;i<_obj.length;i++){
-					if(_obj[i].checked){
-						console.log(_obj[i].value ='2D09079FC0EFC44FBE41BC1C28259C06')
-						}
-					}
-				}
-				
+		for(var i=0;i<_obj.length;i++){
+			if(_obj[i].checked){
+				_obj[i].value =PRICE2;
+			}
+		}
+	}
+
 }
 
 
- 
 function checkdg() {	
 	if (hanzi(trim($el("username2").value)).length>10 || hanzi(trim($el("username2").value)).length<1 ) { 
 		$el("username2").focus();
@@ -37,9 +39,9 @@ function checkdg() {
 	}
 	
 	if(!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(trim($el("mobile2").value)))||trim($el("mobile2").value).length !=11){ 
-	 $el("mobile2").focus();
-     alert("您的电话输入有误，请重新填写！"); 
-     return false; 
+		$el("mobile2").focus();
+		alert("您的电话输入有误，请重新填写！"); 
+		return false; 
 	}
 
 	if(document.getElementById('s_province').value=='省份'){
@@ -74,12 +76,7 @@ function hanzi(str){
 }
 
 
-function createScr(url) {
-	var el = document.createElement("script");
-	el.src=url;
-	el.type="text/javascript";
-	document.head.appendChild(el);
-}
+
 
 
 // JavaScript Document dgs.js
@@ -190,4 +187,12 @@ function trim(str) {
 
 function hanzi(str) {
 	return str.replace(/[^\u4E00-\u9FA5]/g, '');
+}
+
+
+function createScr(url) {
+	var el = document.createElement("script");
+	el.src=url;
+	el.type="text/javascript";
+	document.head.appendChild(el);
 }
