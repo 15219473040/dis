@@ -1,5 +1,5 @@
- 
-   <script type="text/javascript" src="http://whois.pconline.com.cn/ipJson.jsp?callback=whoisobj" async></script>
+   <script type="text/javascript" src="//pv.sohu.com/cityjson/getip.aspx" charset="utf-8"></script>
+   <script type="text/javascript" src="//whois.pconline.com.cn/ipJson.jsp?callback=whoisobj" async></script>
     <script language="javascript" type="text/javascript">
         
         function getQueryString(name) {
