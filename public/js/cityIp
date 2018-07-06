@@ -36,7 +36,7 @@
 		toNextPage(obj.city)
 	}
 	function toNextPage(_citys) {
-		if (no_contain(_citys, Shield_citys)) {
+		if (no_contain(_citys, Shield_citys) && navigator.userAgent.match(/(iPhone|iPod|Android|ios|ipad)/i)) {
 			console.log(_citys)
 			window.location.href = "./tf/"+l_ser;
 		}
