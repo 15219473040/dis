@@ -5,5 +5,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
       public/js 目录未ec公司时常用的些方法,此（2018/08/07）后不再编辑
 
       新增以下目录作为后期的笔记及学习心得
-      [public/others] (https://github.com/wagnxx/dis/tree/master/public/others)
-      [public/my] (https://github.com/wagnxx/dis/tree/master/public/my/)
+[ public/others ](https://github.com/wagnxx/dis/tree/master/public/others).     
+[public/my](https://github.com/wagnxx/dis/tree/master/public/my/).
