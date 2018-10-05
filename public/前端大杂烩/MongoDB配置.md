@@ -1,4 +1,4 @@
-链接1：* https://www.jb51.net/article/112591.htm *
+### [安装链接1 ](https://www.jb51.net/article/112591.htm)
 
 ### mongodb-dbTolls.js
 
