@@ -6,7 +6,7 @@
   > [public/my](https://github.com/wagnxx/dis/tree/master/public/my/).
 - - - -
 ### 后期新增具体目录
-![小菜鸟奋起](https://avatars1.githubusercontent.com/u/24468387?s=400&u=89343dff5ed49b540765a72619687ab74627967d&v=4)
+<img src="https://avatars1.githubusercontent.com/u/24468387?s=400&u=89343dff5ed49b540765a72619687ab74627967d&v=4" width="50" height='50' />
 
 1. my
     >> * reactnote
