@@ -128,15 +128,199 @@ this.setState((state, props) => {
 
 在HTML当中，<select>会创建一个下拉列表，selected属性是被选中的一项，在React中，并不使用之前的selected属性，而在根select标签上用value属性来
 表示选中项。这在受控组件中更为方便，因为你只需要在一个地方来更新组件 
- 
-  ```
  <select value={this.state.value} onChange={this.handleChange}>
+  
+##  支持的事件（均为合成事件）
+
+*  Clipboard Events
+*  Composition Events
+*  Keyboard Events
+*  Focus Events
+*  Form Events
+*  Mouse Events
+*  Selection Events
+*  Touch Events
+*  UI Events
+*  Wheel Events
+*  Media Events
+*  Image Events
+*  Animation Events
+*  Transition Events
+*  Other Events
+
+1. ### Clipboard Events ###
+
+```
+  // 事件名：
+  onCopy onCut onPaste
+  // 属性
+  DOMDataTransfer clipboardData
+
+```
+2. ### Composition Events ###
+
+```
+  // 事件名：
+  onCompositionEnd onCompositionStart onCompositionUpdate
+  // 属性
+  string data
+
+```
+3. ### Keyboard Events ###
+
+```
+  // 事件名：
+  onKeyDown onKeyPress onKeyUp
+  // 属性
+  boolean altKey
+  number charCode
+  boolean ctrlKey
+  boolean getModifierState(key)
+  string key
+  number keyCode
+  string locale
+  number location
+  boolean metaKey
+  boolean repeat
+  boolean shiftKey
+  number which
+
+```
+4. ### Focus Events ###
+
+```
+  // 事件名：
+  onFocus onBlur
+  // 这些焦点事件适用于React DOM中的所有元素，而不仅仅是表单元素。
+  // 属性
+  DOMEventTarget relatedTarget
+
+```
+5. ### Form Events ###
+
+```
+  // 事件名：
+  onChange onInput onSubmit
  
-  ```
+
+```
+6. ### Mouse Events ###
+
+```
+  // 事件名：
+  onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit
+  onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave
+  onMouseMove onMouseOut onMouseOver onMouseUp
+  // onMouseEnter 和 onMouseLeave 事件由失去焦点的元素到正在输入的元素传播，并不是普通的冒泡，也没有捕获阶段。
+  // 属性
+  boolean altKey
+  number button
+  number buttons
+  number clientX
+  number clientY
+  boolean ctrlKey
+  boolean getModifierState(key)
+  boolean metaKey
+  number pageX
+  number pageY
+  DOMEventTarget relatedTarget
+  number screenX
+  number screenY
+  boolean shiftKey
 
 
+```
+7. ### Selection Events ###
 
+```
+  // 事件名：
+  onSelect
+ 
+```
+8. ### Touch Events ###
 
+```
+  // 事件名：
+  onTouchCancel onTouchEnd onTouchMove onTouchStart
+  // 属性
+  boolean altKey
+  DOMTouchList changedTouches
+  boolean ctrlKey
+  boolean getModifierState(key)
+  boolean metaKey
+  boolean shiftKey
+  DOMTouchList targetTouches
+  DOMTouchList touches
+
+```
+9. ### UI  Events ###
+
+```
+  // 事件名：
+  onScroll
+  // 属性
+  number detail
+  DOMAbstractView view
+
+```
+10. ### Wheel Events ###
+
+```
+  // 事件名：
+  onWheel
+  // 属性
+  number deltaMode
+  number deltaX
+  number deltaY
+  number deltaZ
+
+```
+11. ### Media Events ###
+
+```
+  // 事件名：
+  onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted 
+onEnded onError onLoadedData onLoadedMetadata onLoadStart onPause onPlay 
+onPlaying onProgress onRateChange onSeeked onSeeking onStalled onSuspend 
+onTimeUpdate onVolumeChange onWaiting
+
+```
+12. ### Image Events ###
+
+```
+  // 事件名：
+  onLoad onError
+
+```
+13. ### Animation Events ###
+
+```
+  // 事件名：
+ onAnimationStart onAnimationEnd onAnimationIteration
+   // 属性
+  string animationName
+  string pseudoElement
+  float elapsedTime
+ 
+```
+14. ### Transition Events ###
+
+```
+  // 事件名：
+  onTransitionEnd
+  // 属性
+  string propertyName
+  string pseudoElement
+  float elapsedTime
+
+```
+15. ### Other Events ###
+
+```
+  // 事件名：
+  onToggle
+
+```
 
 
 
