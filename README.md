@@ -13,6 +13,8 @@
         - [*webpack4-config*](https://github.com/wagnxx/dis/blob/master/public%2Fmy%2Freactnote%2FcreateWebpackProject)
         - [*react 基础*](https://github.com/wagnxx/dis/blob/master/public/my/reactnote/react%E5%9F%BA%E7%A1%80.md "react基础")
         - [*react初始化源码分析*](https://github.com/wagnxx/dis/blob/master/public/my/reactnote/react%E5%88%9D%E5%A7%8B%E5%8C%96%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90.md "react初始化源码分析")
+      * plugins
+        - [*日历雏形*](https://github.com/wagnxx/dis/blob/master/public%2Fmy%2Fplugins%2Fplugin.calendar.1.0.0.js.md "日历雏形")
         
 2. others
 3. 前端大杂烩
