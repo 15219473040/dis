@@ -161,3 +161,37 @@
     </style>
 
 ```
+#### html中引入和rem设置
+
+```
+    <script>
+
+        window.onload = function () {
+            var hE = document.documentElement;
+            var colNum = 6.40;
+            setFS()    
+            window.onresize = function () {
+
+                setFS()
+            }
+
+            function setFS(rem) {
+                var vw = getVW() > 640 ? 640 : getVW();
+                var baseSize = vw / colNum;
+                hE.style.fontSize = baseSize + "px";
+            }
+
+            function getVW() {
+                return hE.clientWidth;
+            }
+        }
+
+    </script>
+    <script src="./plugin/plugin.calendar.1.0.0.js"></script>
+    <script>
+        var oc=document.querySelector(".container");
+        var cal = new Cal(oc,{
+            selectedDate:"2018/10/25",
+        });
+    </script>
+```
