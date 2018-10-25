@@ -97,3 +97,67 @@
 
 
 ```
+#### 样式代码：
+```
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{font-size: 14px;}
+        .container {
+            width: 500px;
+            margin: auto;
+        }
+
+        .calendar {
+            width: 4rem;
+            margin: auto;
+            border: 1px solid#333;
+        }
+
+        .calendar-header {
+            text-align: center;
+            padding: 1% 0;
+        }
+
+        .calendar-header em {
+            margin-right: 5px;
+            color: #333
+        }
+
+        .calendar-week {
+            display: flex;
+            justify-content: space-between
+        }
+        .calendar-week>span{
+            width: 0.57rem;
+            text-align: center;
+            padding: 1% 0;
+        }
+
+        .calendar-list {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap
+        }
+
+        .calendar-list>span {
+            width: 0.57rem;
+            height: 0.57rem;
+            line-height: 0.57rem;
+            text-align: center;    
+            border: 1px solid #eee;
+        
+            box-sizing: border-box;
+        }
+        .not-allowed{
+            cursor: not-allowed;
+            user-select: none;
+        }
+        .calendar-act{
+            background:#de6b50
+        }
+    </style>
+
+```
