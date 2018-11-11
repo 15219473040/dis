@@ -1,1 +1,3 @@
 test commit 0
+
+before stash 0
