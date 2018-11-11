@@ -3,3 +3,4 @@ test commit 0
 before stash 0
 tag2
 tag3?
+tag3? brach
