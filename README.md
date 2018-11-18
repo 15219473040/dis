@@ -1,9 +1,4 @@
-### **目录说明**
- 以下目录作为后期的笔记及学习心得,路径暂时有问题，尚未修复
-  > [public/others](https://github.com/wagnxx/dis/tree/master/public/others).     
-  > [public/my](https://github.com/wagnxx/dis/tree/master/public/my/).
-- - - -
-### 后期新增具体目录
+
 <img src="https://avatars1.githubusercontent.com/u/24468387?s=400&u=89343dff5ed49b540765a72619687ab74627967d&v=4" width="50" height='50' />
      
 1. JS
