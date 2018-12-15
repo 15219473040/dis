@@ -71,6 +71,8 @@
 ```
 2. 对整个allmenu进行处理，内部单独特殊处理
 ```
+ const openKey=["baseDiagnosis"]
+ 
  for(var i=0;i<allMenu.length;i++){
 
   if(openKey.includes(allMenu[i].id)){
